@@ -1,4 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:EmbedNativeAwesomeness" x:Class="EmbedNativeAwesomeness.EmbedNativeAwesomenessPage">
-    <Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+		xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+		xmlns:local="clr-namespace:EmbedNativeAwesomeness"
+        xmlns:ios="clr-namespace:UIKit;assembly=Xamarin.iOS;targetPlatform=iOS"
+		xmlns:ioscustom="clr-namespace:EmbedNativeAwesomeness.iOS;assembly=EmbedNativeAwesomeness.iOS;targetPlatform=iOS"
+		xmlns:android="clr-namespace:Android.Widget;assembly=Mono.Android;targetPlatform=Android"
+        xmlns:androidForms="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.Platform.Android;targetPlatform=Android"
+		x:Class="EmbedNativeAwesomeness.EmbedNativeAwesomenessPage">
+	<StackLayout VerticalOptions="Center" HorizontalOptions="Center">
+		<Label Text="Isn't this awesome?!" VerticalOptions="Center" HorizontalOptions="Center" />	
+	    <ios:UIDatePicker />
+		<ios:UISlider MaxValue="10" Value="{Binding SlideValue}" /> 
+		<ios:UIStepper />
+		<ios:UISwitch />
+		<ioscustom:UiRedTintSwitch />
+		<android:RatingBar x:Arguments="{x:Static androidForms:Forms.Context}" />
+	</StackLayout>
 </ContentPage>
